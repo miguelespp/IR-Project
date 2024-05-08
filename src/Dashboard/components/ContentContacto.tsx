@@ -14,44 +14,44 @@ import RefreshIcon from '@mui/icons-material/Refresh';
 export default function Content() {
   return (
     <Paper sx={{ maxWidth: 936, margin: 'auto', overflow: 'hidden' }}>
-      <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        sx={{ borderBottom: '1px solid rgba(0, 0, 0, 0.12)' }}
-      >
-        <Toolbar>
-          <Grid container spacing={2} alignItems="center">
-            <Grid item>
-              <SearchIcon color="inherit" sx={{ display: 'block' }} />
-            </Grid>
-            <Grid item xs>
-              <TextField
-                fullWidth
-                placeholder="Search by email address, phone number, or user UID"
-                InputProps={{
-                  disableUnderline: true,
-                  sx: { fontSize: 'default' },
-                }}
-                variant="standard"
-              />
-            </Grid>
-            <Grid item>
-              <Button variant="contained" sx={{ mr: 1 }}>
-                Add user
-              </Button>
-              <Tooltip title="Reload">
-                <IconButton>
-                  <RefreshIcon color="inherit" sx={{ display: 'block' }} />
-                </IconButton>
-              </Tooltip>
-            </Grid>
+        <Grid container spacing={2} justifyContent="center" alignItems="center" sx={{ padding: '24px' }}>
+          <Grid item xs={12}>
+            <AppBar position="static" color="default" elevation={0}>
+              <Toolbar>
+                <Typography variant="h6" color="inherit" noWrap>
+                  Contact Information
+                </Typography>
+              </Toolbar>
+            </AppBar>
           </Grid>
-        </Toolbar>
-      </AppBar>
-      <Typography sx={{ my: 5, mx: 2 }} color="text.secondary" align="center">
-        No users for this project yet
-      </Typography>
-    </Paper>
+          <Grid item xs={12}>
+            <TextField label="Name" variant="outlined" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField label="Email" variant="outlined" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField label="Phone" variant="outlined" fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField label="Message" variant="outlined" multiline rows={4} fullWidth />
+          </Grid>
+          <Grid item xs={12}>
+            <Button variant="contained" color="primary">
+              Send Message
+            </Button>
+            <Tooltip title="Search">
+              <IconButton>
+                <SearchIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title="Refresh">
+              <IconButton>
+                <RefreshIcon />
+              </IconButton>
+            </Tooltip>
+          </Grid>
+        </Grid>
+      </Paper>
   );
 }

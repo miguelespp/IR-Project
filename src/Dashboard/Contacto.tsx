@@ -1,22 +1,21 @@
-import React from 'react';
-import Header from './components/Header';
-import Navigator from './components/Navigator';
-import Content from './components/ContentContacto';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import CssBaseline from '@mui/material/CssBaseline';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Link from '@mui/material/Link';
-
+import React from "react";
+import Header from "./components/Header";
+import Navigator from "./components/Navigator";
+import Content from "./components/ContentContacto";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import CssBaseline from "@mui/material/CssBaseline";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
+import Link from "@mui/material/Link";
 
 function Copyright() {
   return (
     <Typography variant="body2" color="text.secondary" align="center">
-      {'Copyright © '}
+      {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         FISISite
-      </Link>{' '}
+      </Link>{" "}
       {new Date().getFullYear()}.
     </Typography>
   );
@@ -25,9 +24,9 @@ function Copyright() {
 let theme = createTheme({
   palette: {
     primary: {
-      light: '#63ccff',
-      main: '#009be5',
-      dark: '#006db3',
+      light: "#63ccff",
+      main: "#009be5",
+      dark: "#006db3",
     },
   },
   typography: {
@@ -60,19 +59,19 @@ theme = {
     MuiDrawer: {
       styleOverrides: {
         paper: {
-          backgroundColor: '#081627',
+          backgroundColor: "#081627",
         },
       },
     },
     MuiButton: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
+          textTransform: "none",
         },
         contained: {
-          boxShadow: 'none',
-          '&:active': {
-            boxShadow: 'none',
+          boxShadow: "none",
+          "&:active": {
+            boxShadow: "none",
           },
         },
       },
@@ -93,11 +92,11 @@ theme = {
     MuiTab: {
       styleOverrides: {
         root: {
-          textTransform: 'none',
-          margin: '0 16px',
+          textTransform: "none",
+          margin: "0 16px",
           minWidth: 0,
           padding: 0,
-          [theme.breakpoints.up('md')]: {
+          [theme.breakpoints.up("md")]: {
             padding: 0,
             minWidth: 0,
           },
@@ -121,15 +120,15 @@ theme = {
     MuiDivider: {
       styleOverrides: {
         root: {
-          backgroundColor: 'rgb(255,255,255,0.15)',
+          backgroundColor: "rgb(255,255,255,0.15)",
         },
       },
     },
     MuiListItemButton: {
       styleOverrides: {
         root: {
-          '&.Mui-selected': {
-            color: '#4fc3f7',
+          "&.Mui-selected": {
+            color: "#4fc3f7",
           },
         },
       },
@@ -145,10 +144,10 @@ theme = {
     MuiListItemIcon: {
       styleOverrides: {
         root: {
-          color: 'inherit',
-          minWidth: 'auto',
+          color: "inherit",
+          minWidth: "auto",
           marginRight: theme.spacing(2),
-          '& svg': {
+          "& svg": {
             fontSize: 20,
           },
         },
@@ -169,7 +168,7 @@ const drawerWidth = 256;
 
 export default function Paperbase() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const isSmUp = useMediaQuery(theme.breakpoints.up('sm'));
+  const isSmUp = useMediaQuery(theme.breakpoints.up("sm"));
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -177,7 +176,7 @@ export default function Paperbase() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex', minHeight: '100vh' }}>
+      <Box sx={{ display: "flex", minHeight: "100vh" }}>
         <CssBaseline />
         <Box
           component="nav"
@@ -193,15 +192,18 @@ export default function Paperbase() {
           )}
           <Navigator
             PaperProps={{ style: { width: drawerWidth } }}
-            sx={{ display: { sm: 'block', xs: 'none' } }}
+            sx={{ display: { sm: "block", xs: "none" } }}
           />
         </Box>
-        <Box sx={{ flex: 1, display: 'flex', flexDirection: 'column' }}>
-          <Header onDrawerToggle={handleDrawerToggle} title='Contacto' />
-          <Box component="main" sx={{ flex: 1, py: 6, px: 4, bgcolor: '#eaeff1' }}>
+        <Box sx={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          <Header onDrawerToggle={handleDrawerToggle} title="Contacto" />
+          <Box
+            component="main"
+            sx={{ flex: 1, py: 6, px: 4, bgcolor: "#eaeff1" }}
+          >
             <Content />
           </Box>
-          <Box component="footer" sx={{ p: 2, bgcolor: '#eaeff1' }}>
+          <Box component="footer" sx={{ p: 2, bgcolor: "#eaeff1" }}>
             <Copyright />
           </Box>
         </Box>
