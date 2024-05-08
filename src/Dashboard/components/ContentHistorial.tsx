@@ -5,25 +5,14 @@ import Typography from "@mui/material/Typography";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Button from "@mui/material/Button";
-import TextField from "@mui/material/TextField";
 import Tooltip from "@mui/material/Tooltip";
 import IconButton from "@mui/material/IconButton";
 import SearchIcon from "@mui/icons-material/Search";
 import RefreshIcon from "@mui/icons-material/Refresh";
-import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import { Avatar, CardHeader } from "@mui/material";
-
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
 
 export default function Content() {
   return (
@@ -49,14 +38,16 @@ export default function Content() {
           </AppBar>
         </Grid>
         <Grid item xs={5}>
-          <Card sx={{ minWidth: 275, margin:2, maxWidth:300, border:1 }}>
-            <CardHeader avatar={
-              <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-                R
-              </Avatar>
-            }
-            title='Doctor Gomez Olivera'>
-            <Typography
+          <Card sx={{ minWidth: 275, margin: 2, maxWidth: 300, border: 1 }}>
+            <CardHeader
+              avatar={
+                <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+                  R
+                </Avatar>
+              }
+              title="Doctor Gomez Olivera"
+            >
+              <Typography
                 sx={{ fontSize: 14 }}
                 color="text.secondary"
                 gutterBottom
@@ -65,7 +56,6 @@ export default function Content() {
               </Typography>
             </CardHeader>
             <CardContent>
-              
               <Typography variant="h5" component="div">
                 Traumatologia
               </Typography>
@@ -84,14 +74,16 @@ export default function Content() {
           </Card>
         </Grid>
         <Grid item xs={5}>
-          <Card sx={{ minWidth: 275, margin:2, maxWidth:300, border:1 }}>
-            <CardHeader avatar={
-              <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
-                R
-              </Avatar>
-            }
-            title='Doctor Soto Orellana'>
-            <Typography
+          <Card sx={{ minWidth: 275, margin: 2, maxWidth: 300, border: 1 }}>
+            <CardHeader
+              avatar={
+                <Avatar sx={{ bgcolor: "red" }} aria-label="recipe">
+                  R
+                </Avatar>
+              }
+              title="Doctor Soto Orellana"
+            >
+              <Typography
                 sx={{ fontSize: 14 }}
                 color="text.secondary"
                 gutterBottom
@@ -100,7 +92,6 @@ export default function Content() {
               </Typography>
             </CardHeader>
             <CardContent>
-              
               <Typography variant="h5" component="div">
                 Nutricion
               </Typography>
