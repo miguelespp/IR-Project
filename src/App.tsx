@@ -1,4 +1,3 @@
-import React from "react";
 import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import SignInSide from "./SignInSide.tsx";
 import Reservas from "./Dashboard/Reservas.tsx";
