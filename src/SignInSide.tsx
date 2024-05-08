@@ -105,7 +105,7 @@ export default function SignInSide() {
                 variant="contained"
                 endIcon={<SendIcon />}
                 sx={{ mt: 3, mb: 2 }}
-                onClick={() => {window.location.href = '/reservas'}}
+                onClick={() => {window.location.href = '/IR-Project/reservas'}}
               >
                 Sign In
               </Button>

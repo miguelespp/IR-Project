@@ -15,7 +15,7 @@ const Home = () => {
 
 export const App = () => {
   return (
-    <BrowserRouter basename="/IR-Project">
+    <BrowserRouter basename="/IR-Project/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<SignInSide />} />
