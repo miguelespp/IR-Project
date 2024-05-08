@@ -14,14 +14,20 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import EditCalendarIcon from '@mui/icons-material/EditCalendar';
 import SendIcon from '@mui/icons-material/Send';
 
-function Copyright(props: any) {
+interface copyrightProps {
+  name: string;
+  year: number;
+  style: object;
+}
+
+function Copyright({name, year, style}: copyrightProps) {
   return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
+    <Typography variant="body2" color="text.secondary" align="center" sx={style}>
       {'Copyright © '}
       <Link color="inherit" href="https://mui.com/">
-        PepitoWebSite
+        {name}
       </Link>{' '}
-      {new Date().getFullYear()}
+      {year}
       {'.'}
     </Typography>
   );
@@ -105,7 +111,7 @@ export default function SignInSide() {
                 variant="contained"
                 endIcon={<SendIcon />}
                 sx={{ mt: 3, mb: 2 }}
-                onClick={() => {window.location.href = '/IR-Project/reservas'}}
+                href="/IR-Project/reservas"
               >
                 Sign In
               </Button>
@@ -121,7 +127,7 @@ export default function SignInSide() {
                   </Link>
                 </Grid>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
+              <Copyright style={{ mt: 5 }} name='FisiConsultas' year={2003} />
             </Box>
           </Box>
         </Grid>
