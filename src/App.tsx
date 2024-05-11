@@ -1,4 +1,4 @@
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { createHashRouter, Link, RouterProvider } from "react-router-dom";
 import SignInSide from "./SignInSide.tsx";
 import Reservas from "./Dashboard/Reservas.tsx";
 import Historial from "./Dashboard/Historial.tsx";
@@ -13,9 +13,44 @@ const Home = () => {
   );
 };
 
+const router = createHashRouter([
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/login",
+    element: <SignInSide />,
+  },
+  {
+    path: "/reservas",
+    element: <Reservas />,
+  },
+  {
+    path: "/historial",
+    element: <Historial />,
+  },
+  {
+    path: "/contacto",
+    element: <Contacto />,
+  },
+  {
+    path: "/perfil",
+    element: <Perfil />,
+  },
+]);
+
 export const App = () => {
   return (
-    <BrowserRouter basename="/IR-Project/">
+    <>
+      <RouterProvider router={router} />
+    </>
+  );
+};
+
+{
+  /* Router para paginas normales
+<BrowserRouter basename="/IR-Project/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<SignInSide />} />
@@ -25,6 +60,5 @@ export const App = () => {
         <Route path="/perfil" element={<Perfil />} />
         <Route />
       </Routes>
-    </BrowserRouter>
-  );
-};
+    </BrowserRouter> */
+}

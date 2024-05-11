@@ -21,25 +21,25 @@ const categories = [
       {
         id: "Registrar Cita",
         icon: <AppRegistrationIcon />,
-        href: "/IR-Project/reservas",
+        href: "/IR-Project/#/reservas",
       },
       {
         id: "Mi Historial Medico",
         icon: <PeopleIcon />,
-        href: "/IR-Project/historial",
+        href: "/IR-Project/#/historial",
       },
       {
         id: "Contacto",
         icon: <PermContactCalendarIcon />,
-        href: "/IR-Project/contacto",
+        href: "/IR-Project/#/contacto",
       },
     ],
   },
   {
     id: " ",
     children: [
-      { id: "Mi perfil", icon: <SettingsIcon />, href: "/IR-Project/perfil" },
-      { id: "Salir", icon: <ExitToAppIcon />, href: "/IR-Project/login" },
+      { id: "Mi perfil", icon: <SettingsIcon />, href: "/IR-Project/#/perfil" },
+      { id: "Salir", icon: <ExitToAppIcon />, href: "/IR-Project/#/login" },
     ],
   },
 ];
