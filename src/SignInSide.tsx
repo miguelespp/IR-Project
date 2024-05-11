@@ -124,7 +124,7 @@ export default function SignInSide() {
                 variant="contained"
                 endIcon={<SendIcon />}
                 sx={{ mt: 3, mb: 2 }}
-                href="IR-Project/#/reservas"
+                href="/IR-Project/#/reservas"
               >
                 Sign In
               </Button>
